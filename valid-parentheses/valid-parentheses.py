@@ -8,13 +8,8 @@ class Solution:
             if s[i] in ['(', '[', '{']:
                 stack.append(s[i])
             else:
-                try:
-                    if s[i] == hashmap[stack[-1]]:
-                        stack.pop(-1)
-                    else:
-                        return False
-                except:
+                if len(stack) and s[i] == hashmap[stack[-1]]:
+                    stack.pop(-1)
+                else:
                     return False
-        if len(stack):
-            return False
-        return True
+        return stack == []
