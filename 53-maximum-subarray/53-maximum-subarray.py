@@ -1,7 +1,7 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         total = 0
-        maximum = -1e9
+        maximum = -10001
         for i in nums:
             total += i
             maximum = max(total, maximum)
