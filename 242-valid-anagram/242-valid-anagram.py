@@ -1,5 +1,8 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        
+        # Create an array of size 26. For all elements in s, increment the letter index (ord) by 1 and for all elements in t, decrement the letter index by 1. At the end traverse the letter array and return False if any element is not equal to 0. Else, return True
+        
         letter_array = [0]*26
         for each_letter in s:
             letter_array[ord(each_letter) - ord('a')] += 1
@@ -9,6 +12,8 @@ class Solution:
             if i != 0:
                 return False
         return True
+        
+        # Count approach - Working
         
         # if len(s) != len(t):    return False
         # s_dict, t_dict = {}, {}
