@@ -9,8 +9,9 @@ class Solution:
         """
         smaller, larger = 0, len(numbers) - 1
         while numbers[smaller] + numbers[larger] != target:
-            if numbers[smaller] + numbers[larger] > target:
+            sum = numbers[smaller] + numbers[larger]
+            if sum > target:
                 larger -= 1
-            elif numbers[smaller] + numbers[larger] < target:
+            elif sum < target:
                 smaller += 1
         return [smaller + 1, larger + 1]
