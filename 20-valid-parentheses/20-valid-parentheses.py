@@ -5,6 +5,7 @@ class Solution:
         If the counterpart of the current paranthesis is not available in the stack append to the stack
         Else check if the counterpart i available - then pop the counterpart from the stack
         Return True is the stack is empty at the end, else False
+        * Return False directly if a closing bracket is found
         """
         if len(s) < 2: return False
         stack = []
