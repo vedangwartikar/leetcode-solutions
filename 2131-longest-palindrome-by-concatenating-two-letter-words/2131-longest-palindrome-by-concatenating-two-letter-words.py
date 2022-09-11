@@ -7,7 +7,7 @@ class Solution:
                 count[i] = 1
             else:
                 count[i] += 1
-        for j in count.copy():
+        for j in count:
             if count[j] > 0:
                 if j[::-1] in count and j[0] != j[1]:
                     counterparts = min(count[j], count[j[::-1]])
