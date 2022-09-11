@@ -1,5 +1,11 @@
 class Solution:
     def longestPalindrome(self, words: List[str]) -> int:
+        """
+        Create a counter of all the elements in the list
+        Traverse through the count dict, if the counterpart of a different string ("ab" -> "ba") is available in the dict, update the result with min("ab", "ba") and decrement their counts
+        If same string is encountered ("aa", "aa", "bb") take the maximum of even strings available (5 -> 4, 2 -> 2) ad update the counts
+        At the very end, if there are still same strings ("xx", "yy") add 2 to the result as one of the same strings can be added in the middle of the longest palindrome 
+        """
         count = {}
         result = 0
         for i in words:
