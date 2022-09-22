@@ -3,6 +3,11 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+"""
+Traverse using slow and fast pointers but also keep a reallyslow pointer that should be pointing at middle-1 (node before the slow)
+Remove reallyslow's next (middle node) using next.next
+O(n)
+"""
 class Solution:
     def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head.next:
