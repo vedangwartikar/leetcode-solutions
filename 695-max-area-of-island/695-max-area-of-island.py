@@ -1,3 +1,7 @@
+"""
+Same as numOfIslands() but while traversing keep a track of dfs '1' counts and return int accordingly -> 1 + up + down + right + left, else return 0
+Finally in matrix traversal return max (global_count, dfs())
+"""
 class Solution:
     max_counter = 0
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
