@@ -1,3 +1,8 @@
+"""
+Create a function is_valid() that takes in one block at a time and returns True/False
+Create separate functions for rows, columns, squares and passone block at a time and check if it is valid
+Return True if all blocks are valid else False
+"""
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         return self.check_row(board) and self.check_column(board) and self.check_square(board)
