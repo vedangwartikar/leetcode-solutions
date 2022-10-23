@@ -1,5 +1,9 @@
+"""
+Create a directed graph and store the a/b values as a->b as value and b->a as 1/value
+Recursively using DFS, traverse nodes to find the path using the logic a/c = a/b * b/c and store the values accordingly
+Create a resultant list and ad values for each path and return the resultant list
+"""
 class Solution:
-
     def dfs(self, source, value):
         if source == self.destination:
             return value
@@ -12,8 +16,7 @@ class Solution:
                 self.seen.remove(adjacent)
         return -1
 
-    def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]: 
-        
+    def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:        
         self.graph = defaultdict(dict)
         self.seen = set()
         
