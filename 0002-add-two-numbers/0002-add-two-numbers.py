@@ -21,12 +21,10 @@ class Solution:
                 dummy.next = ListNode(addition)
                 dummy = dummy.next
                 carry = 0
-                print(addition)
             else:
                 carry = addition // 10
                 dummy.next = ListNode(addition%10)
                 dummy = dummy.next
-                print(carry, addition%10)
             l1 = l1.next if l1 else l1
             l2 = l2.next if l2 else l2
         if carry:
