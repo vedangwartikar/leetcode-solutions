@@ -15,6 +15,7 @@ class Solution:
             self.count += 1
             if self.count == k:
                 self.kth_node = root.val
+                return
             self.kthSmallest(root.right, k)
         inorder(root)
         return self.kth_node
