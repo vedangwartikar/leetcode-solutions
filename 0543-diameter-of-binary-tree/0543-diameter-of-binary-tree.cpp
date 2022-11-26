@@ -23,7 +23,7 @@ public:
         }
         int left_diameter = helper(root->left, diameter);
         int right_diameter = helper(root->right, diameter);
-        diameter = max(diameter, left_diameter + right_diameter);
+        diameter = max(diameter, left_diameter + right_diameter); // maintain the diameter here (diameter is basically left height + right height)
         return max(left_diameter, right_diameter) + 1;
     }
 };
