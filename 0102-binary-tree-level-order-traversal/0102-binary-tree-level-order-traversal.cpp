@@ -23,8 +23,8 @@ public:
             int queue_size = queue.size();
             for (int i = 0; i < queue_size; i++) {
                 TreeNode* queue_front = queue.front();
-                level.push_back(queue_front->val);
                 queue.pop_front();
+                level.push_back(queue_front->val);
                 if (queue_front->left != NULL) {
                     queue.push_back(queue_front->left);
                 }
