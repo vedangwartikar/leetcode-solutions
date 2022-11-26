@@ -13,8 +13,8 @@ class Solution {
 public:
     vector <int> right_view = {};
     int level = 0;
+    
     vector<int> rightSideView(TreeNode* root) {
-        recursive_right(root, level);
         recursive_right(root, 0);
         return right_view;
     }
