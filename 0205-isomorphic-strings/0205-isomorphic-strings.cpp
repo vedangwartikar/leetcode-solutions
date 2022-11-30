@@ -23,6 +23,6 @@ public:
                 return false; // return false (non-isomorphic character encountered)
             }
         }
-        return true; // ll characters are isomorphic
+        return true; // all characters are isomorphic
     }
 };
