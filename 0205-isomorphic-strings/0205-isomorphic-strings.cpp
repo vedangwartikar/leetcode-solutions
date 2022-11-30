@@ -1,7 +1,7 @@
 class Solution {
 public:
-    vector <int> generate_list (string str) {
-        unordered_map <char, int> seq;
+    vector <int> generate_list (string str) { // function to generate index based list from map
+        map <char, int> seq;
         vector <int> list;
         for (int i = 0; i < str.size(); i++) {
             if ((seq.find(str[i]) != seq.end()) == false) {
