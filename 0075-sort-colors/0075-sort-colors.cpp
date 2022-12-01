@@ -5,9 +5,7 @@ public:
         int temp = 0;
         while (mid <= high) {
             if (nums[mid] == 0) { // if element is 0, swap low - mid and increment low and mid
-                temp = nums[low];
-                nums[low] = nums[mid];
-                nums[mid] = temp;
+                swap(nums[low], nums[mid]);
                 low += 1;
                 mid += 1;
             }
@@ -15,9 +13,7 @@ public:
                 mid += 1;
             }
             else { // if element is 2, swap mid - high and decrement high
-                temp = nums[mid];
-                nums[mid] = nums[high];
-                nums[high] = temp;
+                swap(nums[mid], nums[high]);
                 high -= 1;
             }
         }
