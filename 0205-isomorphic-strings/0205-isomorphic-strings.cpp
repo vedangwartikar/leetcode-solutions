@@ -18,11 +18,6 @@ public:
     bool isIsomorphic(string s, string t) {
         vector <int> s_list = generate_list(s); // get the index-based list
         vector <int> t_list = generate_list(t); // get the index-based list
-        for (int i = 0; i < s_list.size(); i++) { // for each character
-            if (s_list[i] != t_list[i]) { // if the index-based elements don't match
-                return false; // return false (non-isomorphic character encountered)
-            }
-        }
-        return true; // all characters are isomorphic
+        return s_list == t_list;
     }
 };
